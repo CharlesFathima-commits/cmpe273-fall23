@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service ValidateAddressService {
+  rpc ValidateAddress (ValidateAddress_Request) returns (ValidateAddress_Response);
+  
+}
+
+message ValidateAddress_Request {
+  string postalCode = 1;
+  string locality = 2;
+  string addressLines = 3;
+}
+
+message ValidateAddress_Response {
+
+  bool result = 1;
+}
